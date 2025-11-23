@@ -18,6 +18,8 @@ jobs:
         distribution: 'temurin'
     - name: Build with Gradle
       run: ./gradlew build
+    - name: Create distribution zip
+      run: ./gradlew distZip
     - name: Upload build artifact
       uses: actions/upload-artifact@v4
       with:
